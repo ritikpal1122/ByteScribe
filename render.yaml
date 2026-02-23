@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: learntext-api
+    runtime: docker
+    dockerfilePath: backend/Dockerfile
+    dockerContext: backend
+    region: oregon
+    plan: free
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DATABASE_URL
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "false"
+      - key: FRONTEND_URL
+        sync: false
+      - key: PISTON_URL
+        value: "https://emkc.org/api/v2/piston"
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM_EMAIL
+        value: "noreply@learntext.dev"
+      - key: SMTP_FROM_NAME
+        value: "LearnText"
+      - key: SMTP_USE_TLS
+        value: "true"
+    healthCheckPath: /api/health
