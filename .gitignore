@@ -34,3 +34,7 @@ redis_data/
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Guides
+BACKEND_GUIDE.md
+FRONTEND_GUIDE.md
