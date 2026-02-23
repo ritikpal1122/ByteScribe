@@ -1,4 +1,4 @@
-# LearnText
+# ByteScribe
 
 **All-in-One Knowledge Sharing & Interview Prep Platform.**
 
@@ -20,7 +20,7 @@ I chose a domain I deeply understand (interview prep) so I could focus on **engi
 
 3. **Every major company's engineers built "things that already exist"** — Netflix built internal tools that duplicate existing products. The point is proving you can design and build complex systems, not inventing a new product category.
 
-| Feature | LeetCode | GFG | StackOverflow | Pramp | **LearnText** |
+| Feature | LeetCode | GFG | StackOverflow | Pramp | **ByteScribe** |
 |---------|----------|-----|---------------|-------|--------------|
 | DSA Problems | Yes | Yes | No | No | **Yes** |
 | Articles | No | Yes | No | No | **Yes** |
@@ -171,7 +171,7 @@ User clicks "Submit" on a problem
 ## Project Structure
 
 ```
-learntext/
+bytescribe/
 ├── docker-compose.yml
 ├── README.md
 │

@@ -1,8 +1,8 @@
-# LearnText — Complete Architecture Plan
+# ByteScribe — Complete Architecture Plan
 
 ## 1. Project Overview
 
-**LearnText** is a full-stack interactive learning platform for software engineers — combining LeetCode-style coding problems, community-driven content (articles, Q&A), learning roadmaps with visual flow graphs, AI-powered tutoring, spaced repetition, mock interviews, gamification, and analytics into a single cohesive product.
+**ByteScribe** is a full-stack interactive learning platform for software engineers — combining LeetCode-style coding problems, community-driven content (articles, Q&A), learning roadmaps with visual flow graphs, AI-powered tutoring, spaced repetition, mock interviews, gamification, and analytics into a single cohesive product.
 
 ### Tech Stack
 
@@ -848,7 +848,7 @@ docker run -d -p 2000:2000 ghcr.io/engineer-man/piston  # Code execution
 
 ```env
 # Database
-DATABASE_URL=postgresql+asyncpg://learntext:learntext_secret@localhost:5432/learntext
+DATABASE_URL=postgresql+asyncpg://bytescribe:bytescribe_secret@localhost:5432/bytescribe
 REDIS_URL=redis://localhost:6379/0
 
 # Security

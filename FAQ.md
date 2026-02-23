@@ -1,4 +1,4 @@
-# LearnText — Interview FAQ
+# ByteScribe — Interview FAQ
 
 10 tough cross-questions an interviewer would ask about this project, with detailed answers.
 

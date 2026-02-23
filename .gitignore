@@ -38,3 +38,7 @@ htmlcov/
 # Guides
 BACKEND_GUIDE.md
 FRONTEND_GUIDE.md
+
+# Internal docs
+plan.md
+image.png
