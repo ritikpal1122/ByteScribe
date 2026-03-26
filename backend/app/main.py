@@ -54,3 +54,20 @@ app.include_router(api_router, prefix="/api/v1")
 @app.get("/api/health")
 async def health_check():
     return {"success": True, "data": {"status": "healthy"}, "message": "OK"}
+
+
+@app.post("/api/seed")
+async def run_seed(secret: str = ""):
+    """One-time seed endpoint. Remove after seeding."""
+    if secret != settings.SECRET_KEY:
+        return {"success": False, "message": "Invalid secret"}
+    import subprocess
+    result = subprocess.run(
+        ["python", "scripts/seed_all.py"],
+        capture_output=True, text=True, timeout=300,
+    )
+    return {
+        "success": result.returncode == 0,
+        "stdout": result.stdout[-2000:] if result.stdout else "",
+        "stderr": result.stderr[-2000:] if result.stderr else "",
+    }
