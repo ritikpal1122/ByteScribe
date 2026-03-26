@@ -7,6 +7,16 @@ class Settings(BaseSettings):
     DEBUG: bool = False
 
     DATABASE_URL: str = "postgresql+asyncpg://codedecoded:codedecoded_secret@localhost:5432/codedecoded"
+
+    @property
+    def ASYNC_DATABASE_URL(self) -> str:
+        """Ensure the DATABASE_URL always uses the asyncpg driver."""
+        url = self.DATABASE_URL
+        if url.startswith("postgres://"):
+            url = url.replace("postgres://", "postgresql+asyncpg://", 1)
+        elif url.startswith("postgresql://"):
+            url = url.replace("postgresql://", "postgresql+asyncpg://", 1)
+        return url
     REDIS_URL: str = "redis://localhost:6379/0"
 
     SECRET_KEY: str = "change-me-in-production"
