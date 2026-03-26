@@ -18,7 +18,7 @@ export function useCompletionFx() {
   const [sectionBanner, setSectionBanner] = useState<SectionBanner | null>(null);
   const timestamps = useRef<number[]>([]);
   const idRef = useRef(0);
-  const comboTimer = useRef<ReturnType<typeof setTimeout>>();
+  const comboTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   const triggerCompletion = useCallback((screenX: number, screenY: number) => {
     const now = Date.now();

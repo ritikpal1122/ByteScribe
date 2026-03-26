@@ -54,7 +54,7 @@ export default function AnalyticsTab({ roadmapId, currentSeconds }: AnalyticsTab
   for (let i = 29; i >= 0; i--) {
     const d = new Date(today);
     d.setDate(d.getDate() - i);
-    const key = d.toISOString().split("T")[0];
+    const key = d.toISOString().split("T")[0]!;
     days.push({ date: key, seconds: dailyMap.get(key) ?? 0 });
   }
   const maxDaily = Math.max(1, ...days.map((d) => d.seconds));

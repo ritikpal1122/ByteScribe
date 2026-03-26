@@ -91,19 +91,19 @@ docker system df`,
           {
             question: 'Which backend does Docker Desktop use on macOS to run Linux containers?',
             options: ['Hyper-V', 'A lightweight Linux VM', 'WSL2', 'Native kernel support'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'macOS does not have a Linux kernel, so Docker Desktop runs a lightweight Linux VM (using HyperKit or Apple Virtualization Framework) to host containers.'
           },
           {
             question: 'After adding your Linux user to the docker group, what must you do?',
             options: ['Restart Docker daemon', 'Reboot the system', 'Log out and back in or run newgrp docker', 'Nothing — it takes effect immediately'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Group membership changes require a new login session. You can either log out and back in, or run "newgrp docker" in the current terminal.'
           },
           {
             question: 'What does running "docker run hello-world" verify?',
             options: ['Only that Docker CLI is installed', 'Only that the network works', 'Full end-to-end: daemon running, image pull, and container execution', 'That Docker Hub credentials are set'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'hello-world tests the complete pipeline: Docker CLI communicates with the daemon, daemon pulls the image from Docker Hub, and creates/runs a container.'
           }
         ]
@@ -233,19 +233,19 @@ docker logs -f redis  # follow/tail`,
           {
             question: 'What does the -d flag do in docker run -d nginx?',
             options: ['Deletes the container after exit', 'Runs container in detached (background) mode', 'Disables networking', 'Downloads the image only'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'The -d flag runs the container in detached mode, meaning it runs in the background and returns your terminal prompt immediately.'
           },
           {
             question: 'In docker run -p 8080:80 nginx, what does 8080 refer to?',
             options: ['Container port', 'Host (your machine) port', 'The image version', 'Internal Docker network port'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'The format is host:container. Port 8080 is on your host machine, and traffic is forwarded to port 80 inside the container.'
           },
           {
             question: 'What is the difference between docker exec and docker attach?',
             options: ['They are identical', 'exec starts a new process; attach connects to PID 1', 'attach starts a new process; exec connects to PID 1', 'exec only works with stopped containers'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'docker exec starts a new process (like bash) in a running container. docker attach connects your terminal to PID 1; sending Ctrl+C would kill the main process.'
           }
         ]
@@ -379,19 +379,19 @@ docker images | grep node`,
           {
             question: 'What does the "latest" tag mean for a Docker image?',
             options: ['The most stable and recommended version', 'Always the most recently pushed tag', 'The most recently published stable release by convention', 'A tag that is automatically updated to any new push'],
-            answer: 2,
+            correctIndex: 2,
             explanation: '"latest" is just a conventional tag pointing to the most recent stable release. It is not automatically the newest push — maintainers control what latest points to. Avoid it in production.'
           },
           {
             question: 'What is the key benefit of Alpine-based Docker images?',
             options: ['Better security features', 'Significantly smaller image size (5-10x smaller)', 'Faster runtime performance', 'Better compatibility with all packages'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'Alpine Linux is a minimal distribution (~5MB base). Alpine-based Docker images are typically 5-10x smaller than Debian-based equivalents, speeding up pulls and reducing attack surface.'
           },
           {
             question: 'What is the correct format for tagging an image for Docker Hub?',
             options: ['repository:username:tag', 'username/repository:tag', 'docker.io:username/repository', 'username:repository/tag'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'Docker Hub images follow the format username/repository:tag (e.g., myuser/my-app:1.0.0). The full path is docker.io/username/repository:tag.'
           }
         ]
@@ -606,19 +606,19 @@ docker manifest inspect node:20-alpine`,
           {
             question: 'What happens to image layers when a container writes a file?',
             options: ['The image layer is modified in place', 'A new image is created automatically', 'The write happens in the container\'s writable layer (copy-on-write)', 'The write fails because layers are immutable'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Docker uses copy-on-write semantics. Writes happen in the container\'s thin writable layer on top of read-only image layers. Image layers are never modified.'
           },
           {
             question: 'Why are image digests preferred over tags for production deployments?',
             options: ['Digests download faster', 'Digests are shorter and easier to type', 'Digests are immutable content hashes — the same digest always refers to the exact same image', 'Digests work on more platforms'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Tags are mutable (latest can change), but digests (sha256 hashes) are immutable. Pinning by digest guarantees you always run the exact same image.'
           },
           {
             question: 'What is the benefit of sharing base layers between images?',
             options: ['Images run faster at runtime', 'Layers are stored and downloaded only once, saving disk space and network bandwidth', 'Containers start faster', 'It enables multi-platform support'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'If multiple images share a base layer (e.g., ubuntu:22.04), Docker stores it only once on disk and downloads it only once. This makes pulling related images much faster.'
           }
         ]
@@ -776,13 +776,13 @@ docker buildx build \
           {
             question: 'What is the build context in docker build -t my-app .?',
             options: ['The Dockerfile only', 'The current directory and its contents (sent to the Docker daemon)', 'The Docker daemon\'s working directory', 'The base image specified in FROM'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'The dot (.) specifies the build context — the directory whose contents are packaged and sent to the Docker daemon, making files available to COPY instructions.'
           },
           {
             question: 'What does the EXPOSE instruction actually do?',
             options: ['Publishes the port to the host immediately', 'Opens a firewall rule for the port', 'Documents which ports the container listens on (does not publish them)', 'Creates a network binding for the port'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'EXPOSE is documentation only. It tells other developers and tools which ports the container uses, but does NOT publish ports. You must use -p at runtime to publish.'
           }
         ]
@@ -933,19 +933,19 @@ docker run --init my-app  # tini as PID 1 (alternative)`,
           {
             question: 'What is the main problem with shell form CMD (e.g., CMD node server.js)?',
             options: ['It is slower to start', 'It cannot use environment variables', 'The shell becomes PID 1 and your app does not receive SIGTERM signals', 'It does not support arguments'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Shell form wraps the command in /bin/sh -c. The shell becomes PID 1 and receives SIGTERM, but typically does not forward it to child processes, causing graceful shutdown to fail.'
           },
           {
             question: 'When both ENTRYPOINT and CMD are set, what happens when you pass arguments to docker run?',
             options: ['CMD overrides ENTRYPOINT', 'Arguments replace CMD but ENTRYPOINT stays fixed', 'Arguments are ignored', 'ENTRYPOINT is overridden'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'ENTRYPOINT is the fixed executable. CMD provides default arguments. Arguments to docker run replace CMD but are appended to ENTRYPOINT, giving you a flexible executable with overridable defaults.'
           },
           {
             question: 'Why should you chain package install and cleanup in a single RUN command?',
             options: ['It is faster to execute', 'It reduces the number of environment variables', 'Cleanup in a separate RUN layer cannot reduce the size of the install layer', 'Docker requires it'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Each RUN creates an immutable layer. If you install packages in layer N and delete cache files in layer N+1, the layer N data still exists in the image. Only cleaning up in the same RUN instruction prevents the cache from being stored in the layer.'
           }
         ]
@@ -1182,19 +1182,19 @@ services:
           {
             question: 'What does EXPOSE 8080 in a Dockerfile actually do?',
             options: ['Opens port 8080 on the host firewall', 'Publishes port 8080 to all host interfaces', 'Documents that the container listens on port 8080 (metadata only)', 'Binds the container to host port 8080'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'EXPOSE is documentation metadata only. It tells users which ports the container uses but does not publish or open any ports. You must use -p or -P at docker run time to actually publish ports.'
           },
           {
             question: 'In docker run -p 127.0.0.1:8080:80, what is the purpose of 127.0.0.1?',
             options: ['It is the container\'s IP address', 'It binds the port only to localhost, preventing external access', 'It specifies the Docker network subnet', 'It is required when host and container ports differ'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'Binding to 127.0.0.1 limits access to the local machine only. Without it, Docker binds to 0.0.0.0 (all interfaces), making the port accessible from the network — a security risk for databases and admin services.'
           },
           {
             question: 'What is the key advantage of user-defined bridge networks over the default bridge network?',
             options: ['Better performance', 'Containers can communicate across different Docker hosts', 'Automatic DNS resolution — containers can reach each other by name', 'Support for more containers'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'User-defined bridge networks provide automatic DNS resolution so containers can reach each other by container/service name. The default bridge network requires IP addresses for inter-container communication.'
           }
         ]
@@ -1404,13 +1404,13 @@ RUN CGO_ENABLED=0 go build \
           {
             question: 'Why does copying package.json before source code optimize build cache?',
             options: ['package.json is smaller so it uploads faster', 'Dependency installation is cached unless package.json changes, even when source changes', 'Docker requires dependency files first', 'It prevents security vulnerabilities'],
-            answer: 1,
+            correctIndex: 1,
             explanation: 'By copying only package.json first and running npm install, that layer is cached. When you later change source code, only COPY . . and below re-execute — the slow npm install layer stays cached.'
           },
           {
             question: 'What does --mount=type=cache in BuildKit do?',
             options: ['Speeds up image pulling', 'Caches the entire layer permanently', 'Provides a persistent cache directory for the RUN command that survives between builds', 'Enables remote caching to a registry'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'BuildKit --mount=type=cache mounts a persistent directory (like ~/.cache/pip or ~/.npm) that persists between builds, so package managers don\'t re-download unchanged dependencies.'
           }
         ]
@@ -1595,19 +1595,19 @@ CMD ["node", "server.js"]`,
           {
             question: 'What is the primary security reason to run containers as a non-root user?',
             options: ['It makes the container start faster', 'Non-root processes cannot bind to ports below 1024', 'If the application is compromised, the attacker has limited privileges inside the container', 'Docker requires non-root for production images'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'Running as root means a compromised application has root privileges inside the container. With certain escape vulnerabilities or volume mounts, this can escalate to host root. Non-root users limit blast radius.'
           },
           {
             question: 'What does HEALTHCHECK do in a Dockerfile?',
             options: ['Scans the image for vulnerabilities', 'Validates the Dockerfile syntax', 'Configures Docker to periodically test if the container is functioning correctly', 'Checks network connectivity at build time'],
-            answer: 2,
+            correctIndex: 2,
             explanation: 'HEALTHCHECK configures a command Docker runs periodically inside the container to check if the service is healthy. Unhealthy containers can be detected and replaced by orchestrators automatically.'
           },
           {
             question: 'Why use --no-install-recommends with apt-get install?',
             options: ['It speeds up the apt-get command', 'It prevents installing recommended but unnecessary packages, reducing image size', 'It skips package signature verification', 'It enables offline package installation'],
-            answer: 1,
+            correctIndex: 1,
             explanation: '--no-install-recommends prevents apt from installing "recommended" packages that are not strictly required. This can significantly reduce image size by avoiding dozens of unnecessary packages.'
           }
         ]

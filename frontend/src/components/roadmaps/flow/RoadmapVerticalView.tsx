@@ -65,7 +65,7 @@ function MiniTableOfContents({
             const children = section.children ?? [];
             const done = children.filter((c) => c.is_completed).length;
             const total = children.length;
-            const cs = COLOR_SCHEMES[idx % COLOR_SCHEMES.length];
+            const cs = COLOR_SCHEMES[idx % COLOR_SCHEMES.length]!;
             const isComplete = total > 0 && done === total;
 
             return (
@@ -404,7 +404,7 @@ export default function RoadmapVerticalView({
           {/* Sections + Steps */}
           <div className="relative space-y-10">
             {sections.map((section, sectionIdx) => {
-              const cs = COLOR_SCHEMES[sectionIdx % COLOR_SCHEMES.length];
+              const cs = COLOR_SCHEMES[sectionIdx % COLOR_SCHEMES.length]!;
               const children = section.children ?? [];
               const allDone =
                 children.length > 0 && children.every((c) => c.is_completed);

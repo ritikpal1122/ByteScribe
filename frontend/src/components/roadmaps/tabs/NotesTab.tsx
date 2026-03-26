@@ -31,7 +31,7 @@ export default function NotesTab({ roadmapId, stepId }: NotesTabProps) {
   const [language, setLanguage] = useState("javascript");
   const [initialized, setInitialized] = useState(false);
 
-  const debounceRef = useRef<ReturnType<typeof setTimeout>>();
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
 
   // Load existing note data
   useEffect(() => {

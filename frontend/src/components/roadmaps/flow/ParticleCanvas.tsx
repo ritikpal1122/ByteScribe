@@ -67,7 +67,7 @@ const ParticleCanvas = forwardRef<ParticleCanvasHandle>((_props, ref) => {
           vy: Math.sin(angle) * speed - 5,
           life: 1,
           size: 3 + Math.random() * 5,
-          color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
+          color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)]!,
           type: 'confetti',
           rotation: Math.random() * 360,
           rotationSpeed: (Math.random() - 0.5) * 12,
