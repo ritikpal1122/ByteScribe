@@ -51,7 +51,7 @@ export default function About() {
           Building the future of tech education
         </h1>
         <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-          LearnText is an all-in-one platform for developers to learn, practice, and master
+          CodeDecoded is an all-in-one platform for developers to learn, practice, and master
           programming — from data structures to system design, with interactive tools and
           a supportive community.
         </p>

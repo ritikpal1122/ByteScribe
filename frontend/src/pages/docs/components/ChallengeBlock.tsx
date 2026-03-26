@@ -123,7 +123,7 @@ export default function ChallengeBlock({
   colors: LangColorTokens;
   difficulty?: string;
 }) {
-  const storageKey = `learntext-challenge-${langId}-${entryId}`;
+  const storageKey = `codedecoded-challenge-${langId}-${entryId}`;
   const [code, setCode] = useState(challenge.starterCode);
   const [showSolution, setShowSolution] = useState(false);
   const [revealedHints, setRevealedHints] = useState(0);

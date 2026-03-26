@@ -9,7 +9,7 @@ from app.models.base import Base
 from app.main import app
 from app.database import get_db
 
-TEST_DATABASE_URL = "postgresql+asyncpg://learntext:learntext_secret@localhost:5432/learntext_test"
+TEST_DATABASE_URL = "postgresql+asyncpg://codedecoded:codedecoded_secret@localhost:5432/codedecoded_test"
 
 engine = create_async_engine(TEST_DATABASE_URL, echo=False)
 TestSessionLocal = async_sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)

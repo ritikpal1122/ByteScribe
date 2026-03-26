@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-const PROGRESS_KEY = 'learntext-doc-progress';
+const PROGRESS_KEY = 'codedecoded-doc-progress';
 
 export function useDocProgress() {
   const [completed, setCompleted] = useState<Record<string, string[]>>(() => {

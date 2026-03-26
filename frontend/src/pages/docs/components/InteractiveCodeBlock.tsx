@@ -23,7 +23,7 @@ export default function InteractiveCodeBlock({
   langId: string;
   entryId: string;
 }) {
-  const storageKey = `learntext-code-${entryId}-${langId}`;
+  const storageKey = `codedecoded-code-${entryId}-${langId}`;
   const [isEditing, setIsEditing] = useState(false);
   const [code, setCode] = useState(() => {
     try {

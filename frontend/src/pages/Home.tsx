@@ -192,7 +192,7 @@ export default function Home() {
               style={{ '--delay': '0ms' } as React.CSSProperties}
             >
               <span className="inline-block h-1.5 w-1.5 rounded-full bg-blue-500" />
-              Introducing LearnText
+              Introducing CodeDecoded
             </div>
 
             <h1

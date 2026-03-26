@@ -5,7 +5,7 @@ export function useDocTheme() {
   useEffect(() => {
     document.documentElement.classList.remove('dark');
     try {
-      localStorage.removeItem('learntext-docs-theme');
+      localStorage.removeItem('codedecoded-docs-theme');
     } catch {}
   }, []);
 

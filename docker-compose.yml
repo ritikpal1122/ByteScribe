@@ -1,24 +1,24 @@
 services:
   postgres:
     image: postgres:16-alpine
-    container_name: learntext-postgres
+    container_name: codedecoded-postgres
     environment:
-      POSTGRES_USER: learntext
-      POSTGRES_PASSWORD: learntext_secret
-      POSTGRES_DB: learntext
+      POSTGRES_USER: codedecoded
+      POSTGRES_PASSWORD: codedecoded_secret
+      POSTGRES_DB: codedecoded
     ports:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U learntext"]
+      test: ["CMD-SHELL", "pg_isready -U codedecoded"]
       interval: 5s
       timeout: 5s
       retries: 5
 
   redis:
     image: redis:7-alpine
-    container_name: learntext-redis
+    container_name: codedecoded-redis
     ports:
       - "6379:6379"
     volumes:
@@ -31,7 +31,7 @@ services:
 
   piston:
     image: ghcr.io/engineer-man/piston:latest
-    container_name: learntext-piston
+    container_name: codedecoded-piston
     ports:
       - "2000:2000"
     privileged: true
@@ -45,11 +45,11 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
-    container_name: learntext-backend
+    container_name: codedecoded-backend
     ports:
       - "8000:8000"
     environment:
-      - DATABASE_URL=postgresql+asyncpg://learntext:learntext_secret@postgres:5432/learntext
+      - DATABASE_URL=postgresql+asyncpg://codedecoded:codedecoded_secret@postgres:5432/codedecoded
       - REDIS_URL=redis://redis:6379/0
       - PISTON_URL=http://piston:2000
     depends_on:
@@ -65,7 +65,7 @@ services:
     build:
       context: ./frontend
       dockerfile: Dockerfile
-    container_name: learntext-frontend
+    container_name: codedecoded-frontend
     ports:
       - "5173:5173"
     depends_on:

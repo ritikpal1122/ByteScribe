@@ -13,9 +13,9 @@ jobs:
       postgres:
         image: postgres:16-alpine
         env:
-          POSTGRES_USER: learntext
-          POSTGRES_PASSWORD: learntext_secret
-          POSTGRES_DB: learntext_test
+          POSTGRES_USER: codedecoded
+          POSTGRES_PASSWORD: codedecoded_secret
+          POSTGRES_DB: codedecoded_test
         ports:
           - 5432:5432
         options: >-
@@ -43,7 +43,7 @@ jobs:
       - name: Run tests
         working-directory: backend
         env:
-          DATABASE_URL: postgresql+asyncpg://learntext:learntext_secret@localhost:5432/learntext_test
+          DATABASE_URL: postgresql+asyncpg://codedecoded:codedecoded_secret@localhost:5432/codedecoded_test
           REDIS_URL: redis://localhost:6379/0
           SECRET_KEY: test-secret-key
           PISTON_URL: http://localhost:2000

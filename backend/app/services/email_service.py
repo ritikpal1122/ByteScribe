@@ -59,7 +59,7 @@ async def send_verification_email(to: str, token: str) -> str:
     <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto; padding: 24px;">
         <h2 style="color: #111827;">Verify your email</h2>
         <p style="color: #4b5563; line-height: 1.6;">
-            Thanks for signing up for <strong>LearnText</strong>!
+            Thanks for signing up for <strong>CodeDecoded</strong>!
             Click the button below to verify your email address.
         </p>
         <a href="{link}"
@@ -78,7 +78,7 @@ async def send_verification_email(to: str, token: str) -> str:
         </p>
     </div>
     """
-    await _send_email(to, "Verify your email — LearnText", html)
+    await _send_email(to, "Verify your email — CodeDecoded", html)
     return link
 
 
@@ -100,7 +100,7 @@ async def send_password_reset_email(to: str, token: str) -> str:
     <div style="font-family: sans-serif; max-width: 480px; margin: 0 auto; padding: 24px;">
         <h2 style="color: #111827;">Reset your password</h2>
         <p style="color: #4b5563; line-height: 1.6;">
-            We received a request to reset your <strong>LearnText</strong> password.
+            We received a request to reset your <strong>CodeDecoded</strong> password.
             Click the button below to choose a new one.
         </p>
         <a href="{link}"
@@ -119,5 +119,5 @@ async def send_password_reset_email(to: str, token: str) -> str:
         </p>
     </div>
     """
-    await _send_email(to, "Reset your password — LearnText", html)
+    await _send_email(to, "Reset your password — CodeDecoded", html)
     return link

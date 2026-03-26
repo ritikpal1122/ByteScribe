@@ -33,7 +33,7 @@ export default function QuizBlock({
   langId: string;
   colors: LangColorTokens;
 }) {
-  const storageKey = `learntext-quiz-${langId}-${entryId}`;
+  const storageKey = `codedecoded-quiz-${langId}-${entryId}`;
   const [currentQ, setCurrentQ] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);

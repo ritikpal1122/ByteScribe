@@ -7,8 +7,8 @@ const FOOTER_LINKS = [
 ] as const;
 
 const SOCIAL_LINKS = [
-  { href: 'https://github.com/learntext', label: 'GitHub', icon: Github },
-  { href: 'https://twitter.com/learntext', label: 'Twitter', icon: Twitter },
+  { href: 'https://github.com/codedecoded', label: 'GitHub', icon: Github },
+  { href: 'https://twitter.com/codedecoded', label: 'Twitter', icon: Twitter },
 ] as const;
 
 export function Footer() {
@@ -20,7 +20,7 @@ export function Footer() {
           <div className="flex items-center gap-2">
             <Code2 className="h-5 w-5 text-blue-600" />
             <span className="text-sm font-semibold text-gray-900">
-              LearnText
+              CodeDecoded
             </span>
             <span className="text-sm text-gray-500">
               &copy; {new Date().getFullYear()}

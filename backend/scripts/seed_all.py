@@ -15,7 +15,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 async def main() -> None:
     print("=" * 60)
-    print("  LearnText — Master Seed Script")
+    print("  CodeDecoded — Master Seed Script")
     print("=" * 60)
 
     step = 0

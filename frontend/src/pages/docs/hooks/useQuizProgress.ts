@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 
-const QUIZ_KEY = 'learntext-quiz-progress';
-const CHALLENGE_KEY = 'learntext-challenge-progress';
+const QUIZ_KEY = 'codedecoded-quiz-progress';
+const CHALLENGE_KEY = 'codedecoded-challenge-progress';
 
 interface QuizState {
   quizzes: Record<string, number>;     // entryId -> score (0–100)

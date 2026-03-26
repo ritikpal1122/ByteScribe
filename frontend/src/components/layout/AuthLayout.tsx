@@ -12,7 +12,7 @@ export default function AuthLayout() {
             className="flex items-center gap-2 text-xl font-bold text-gray-900"
           >
             <Code2 className="h-6 w-6 text-blue-600" />
-            <span>LearnText</span>
+            <span>CodeDecoded</span>
           </Link>
         </div>
       </header>

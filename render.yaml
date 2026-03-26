@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: learntext-api
+    name: codedecoded-api
     runtime: docker
     dockerfilePath: backend/Dockerfile
     dockerContext: backend
@@ -30,9 +30,9 @@ services:
       - key: SMTP_PASSWORD
         sync: false
       - key: SMTP_FROM_EMAIL
-        value: "noreply@learntext.dev"
+        value: "noreply@codedecoded.dev"
       - key: SMTP_FROM_NAME
-        value: "LearnText"
+        value: "CodeDecoded"
       - key: SMTP_USE_TLS
         value: "true"
     healthCheckPath: /api/health

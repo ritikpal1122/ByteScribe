@@ -35,7 +35,7 @@ type Language = 'javascript' | 'python' | 'cpp' | 'java' | 'go' | 'rust';
 /*  Editor store (language persisted)                                  */
 /* ------------------------------------------------------------------ */
 
-const LANG_STORAGE_KEY = 'learntext:editor:lang';
+const LANG_STORAGE_KEY = 'codedecoded:editor:lang';
 
 function getPersistedLang(): Language {
   try {

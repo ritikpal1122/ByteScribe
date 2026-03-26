@@ -205,7 +205,7 @@ export default function DocumentationPage() {
             <ArrowLeft className="w-3.5 h-3.5" />
             <BookOpen className="w-4 h-4 text-blue-600" />
             <span className="text-sm font-bold hidden sm:inline">
-              LearnText
+              CodeDecoded
             </span>
           </Link>
         </div>

@@ -62,7 +62,7 @@ function TermsContent() {
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mb-3">1. Acceptance of Terms</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
-          By accessing or using LearnText ("the Platform"), you agree to be bound by these Terms of
+          By accessing or using CodeDecoded ("the Platform"), you agree to be bound by these Terms of
           Service. If you do not agree to these terms, please do not use the Platform. We reserve
           the right to update these terms at any time, and continued use constitutes acceptance of
           any modifications.
@@ -98,7 +98,7 @@ function TermsContent() {
         <h2 className="text-xl font-semibold text-gray-900 mb-3">4. Intellectual Property</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
           All content provided on the Platform — including roadmaps, problems, documentation,
-          articles, and UI components — is owned by LearnText or its content contributors. You may
+          articles, and UI components — is owned by CodeDecoded or its content contributors. You may
           use Platform content for personal learning purposes but may not redistribute, sell, or
           commercially exploit it without explicit permission.
         </p>
@@ -108,7 +108,7 @@ function TermsContent() {
         <h2 className="text-xl font-semibold text-gray-900 mb-3">5. User-Generated Content</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
           When you submit content (notes, articles, comments, code), you retain ownership but grant
-          LearnText a non-exclusive, worldwide license to display and distribute that content on the
+          CodeDecoded a non-exclusive, worldwide license to display and distribute that content on the
           Platform. You are responsible for ensuring your submitted content does not infringe on
           third-party rights.
         </p>
@@ -127,7 +127,7 @@ function TermsContent() {
       <section>
         <h2 className="text-xl font-semibold text-gray-900 mb-3">7. Limitation of Liability</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
-          The Platform is provided "as is" without warranties of any kind. LearnText is not liable
+          The Platform is provided "as is" without warranties of any kind. CodeDecoded is not liable
           for any indirect, incidental, or consequential damages arising from your use of the
           Platform. We do not guarantee uninterrupted access or the accuracy of all content.
         </p>
@@ -146,8 +146,8 @@ function TermsContent() {
         <h2 className="text-xl font-semibold text-gray-900 mb-3">9. Contact</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
           If you have questions about these terms, contact us at{' '}
-          <a href="mailto:legal@learntext.dev" className="text-blue-600 hover:underline">
-            legal@learntext.dev
+          <a href="mailto:legal@codedecoded.dev" className="text-blue-600 hover:underline">
+            legal@codedecoded.dev
           </a>.
         </p>
       </section>
@@ -268,8 +268,8 @@ function PrivacyContent() {
         <h2 className="text-xl font-semibold text-gray-900 mb-3">10. Contact</h2>
         <p className="text-sm text-gray-600 leading-relaxed">
           For privacy-related questions or data requests, contact us at{' '}
-          <a href="mailto:privacy@learntext.dev" className="text-blue-600 hover:underline">
-            privacy@learntext.dev
+          <a href="mailto:privacy@codedecoded.dev" className="text-blue-600 hover:underline">
+            privacy@codedecoded.dev
           </a>.
         </p>
       </section>

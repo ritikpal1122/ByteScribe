@@ -3,10 +3,10 @@ from functools import lru_cache
 
 
 class Settings(BaseSettings):
-    APP_NAME: str = "LearnText"
+    APP_NAME: str = "CodeDecoded"
     DEBUG: bool = False
 
-    DATABASE_URL: str = "postgresql+asyncpg://learntext:learntext_secret@localhost:5432/learntext"
+    DATABASE_URL: str = "postgresql+asyncpg://codedecoded:codedecoded_secret@localhost:5432/codedecoded"
     REDIS_URL: str = "redis://localhost:6379/0"
 
     SECRET_KEY: str = "change-me-in-production"
@@ -30,8 +30,8 @@ class Settings(BaseSettings):
     SMTP_PORT: int = 587
     SMTP_USER: str = ""
     SMTP_PASSWORD: str = ""
-    SMTP_FROM_EMAIL: str = "noreply@learntext.dev"
-    SMTP_FROM_NAME: str = "LearnText"
+    SMTP_FROM_EMAIL: str = "noreply@codedecoded.dev"
+    SMTP_FROM_NAME: str = "CodeDecoded"
     SMTP_USE_TLS: bool = True
 
     # Email verification
